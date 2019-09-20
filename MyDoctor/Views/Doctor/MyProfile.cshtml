@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "MyProfile";
+}
+
+
+@*<style> 
+    
+.img01:target{
+
+ content:url("~/Templetes/Icons/png/doctor.png");  
+ 
+}
+
+</style>*@
+
+
+@{Html.RenderPartial("_Profile");  }
+
+
+<!--Chang the vector image to doctor-->
+<script>
+    let image = document.getElementById('image01');
+    image.src = '/Templetes/Icons/png/doctor.png';
+</script>

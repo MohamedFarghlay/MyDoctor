@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Profile";
+}
+
+<style>
+    .as-doctor{
+         display:none;
+        position:absolute;
+        z-index:-9999;
+    }
+</style>
+
+@{Html.RenderPartial("_Profile");}
+
+
+<!--Change the vector image to patient-->
+<script>
+    let image = document.getElementById('image01');
+    image.src = '/Templetes/Icons/png/user.png';
+</script>

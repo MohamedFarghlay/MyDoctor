@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "DoctorRegister";
+   
+}
+
+<!--Hide The SigUp Button-->
+<style>
+    .btn-hide{
+        display:none;
+    }
+    .p02{
+        margin-bottom:10%;
+    }
+    .as-patient{
+        display:none;
+        position:absolute;
+        z-index:-9999;
+    }
+
+</style>
+<link href="~/Templetes/SignUp/Style.css" rel="stylesheet" />
+<link href="~/Templetes/SignUp2/Style.css" rel="stylesheet" />
+
+<form action="DoctorDashboard">
+    @{Html.RenderPartial("_User"); }
+
+
+    <input style="FONT-WEIGHT: 500;color: #fff3f0;font-size: 20px;margin-bottom: 0;" type="submit" value="SIGNUP">
+</form>
+<div class="p02">
+    <p style="color:wheat;">Don't have an Account ? @Html.ActionLink("Login Now!", "LogIn", "Home")
+</div>

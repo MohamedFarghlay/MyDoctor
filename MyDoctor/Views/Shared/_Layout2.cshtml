@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>MyDoctor</title>
+
+ 
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>MyDoctor</title>
+
+    @*@Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")*@
+
+
+
+
+    <link rel="icon" href="~/Templetes/Index/img/favicon.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/Templetes/Index/css/bootstrap.min.css">
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="~/Templetes/Index/css/animate.css">
+    <!-- owl carousel CSS -->
+    <link rel="stylesheet" href="~/Templetes/Index/css/owl.carousel.min.css">
+    <!-- themify CSS -->
+    <link rel="stylesheet" href="~/Templetes/Index/css/themify-icons.css">
+    <!-- flaticon CSS -->
+    <link rel="stylesheet" href="~/Templetes/Index/css/flaticon.css">
+    <!-- magnific popup CSS -->
+    <link rel="stylesheet" href="~/Templetes/Index/css/magnific-popup.css">
+    <!-- nice select CSS -->
+    <link rel="stylesheet" href="~/Templetes/Index/css/nice-select.css">
+    <!-- swiper CSS -->
+    <link rel="stylesheet" href="~/Templetes/Index/css/slick.css">
+    <!-- style CSS -->
+    <link rel="stylesheet" href="~/Templetes/Index/css/style.css">
+
+</head>
+
+
+
+
+
+<body>
+
+
+
+    <!--::header part start::-->
+    <header class="main_menu home_menu menu_fixed">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                            <img src="~/Templetes/Index/img/favicon.png" alt="Logo" />
+                            @Html.ActionLink("MyDoctor","Index","Home",new {@class= "navbar-brand" })
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse main-menu-item justify-content-center"
+                             id="navbarSupportedContent">
+                            <ul class="navbar-nav align-items-center">
+                               
+                                <li class="nav-item nav-link">
+                                    @Html.ActionLink("Home", "Index", "Home")
+                                </li>
+
+                                <li class="nav-item nav-link">
+                                    @Html.ActionLink("About", "About", "Home")
+                                </li>
+                                <li class="nav-item nav-link">
+                                    @Html.ActionLink("Doctors", "Doctors", "Doctor")
+                                </li>
+                                   
+                                
+                                <li class="nav-item nav-link">
+                                    @Html.ActionLink("Contact", "Contact", "Home")
+
+                                </li>
+                               
+                            </ul>
+                        </div>   
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary btn-hide" data-toggle="modal" data-target="#exampleModalCenter" data-backdrop="false">
+                            Register Now
+                           
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">Register</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        
+                                        @Html.ActionLink("As A Doctor", "DoctorRegister", "Doctor", new { @class = "as-doctor btn_2 d-none d-lg-block " })
+                                        @Html.ActionLink("As A Patient", "PatientRegister", "Patient", new { @class = "as-patient btn_2 d-none d-lg-block " })
+                                        Aleardy Have An Account ?
+                                        
+                                        @Html.ActionLink(" Log In", "LogIn", "Home",new {@class= "txt2 hov1" })
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-outline-danger float-none " data-dismiss="modal">Close</button>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        @*@Html.ActionLink("SignUp", "SignUp", "Home",new {@class="btn_2 d-none d-lg-block" })*@    
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header part end-->
+
+
+
+
+
+    <div  class="container body-content">
+        @RenderBody()
+    </div>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

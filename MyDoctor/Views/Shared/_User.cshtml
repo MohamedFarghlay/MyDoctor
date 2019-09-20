@@ -1,0 +1,99 @@
+﻿@{
+
+    Layout = null;
+}
+
+
+<!--==========================================================================================-->
+
+
+<head>
+    <title>MyDoctor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- Custom Theme files -->
+    <link href="~/Templetes/SignUp/Style.css" rel="stylesheet" />
+    <link href="~/Templetes/SignUp2/Style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- //Custom Theme files -->
+    <!-- web font -->
+    <link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+    <!-- //web font -->
+</head>
+
+<body>
+
+    <!-- main -->
+    <div class="main-w3layouts wrapper">
+        <h1>SignUp</h1>
+        <div class="main-agileinfo">
+            <div class="agileits-top">
+                <!--Fisrt And Last Names-->
+                <input class="text" type="text"  placeholder="First name and Last name" required="">
+
+                <!--Email-->
+                <input class="text email" type="email"  placeholder="Email" required="">
+
+                <!--Mobile Number-->
+                <input class="text" type="text"  placeholder="Mobile Number"  required="" />
+                <br />
+                <!--Password-->
+                <input class="text" type="password"  placeholder="Password" required="">
+                <input class="text w3lpass" type="password"  placeholder="Confirm Password" required="">
+                <!--Gender-->
+                <div class="radio">
+                    Gender &nbsp; &nbsp;&nbsp;
+                    @Html.RadioButton("Gender", "Male", new { @class = "sg-replace-icons sg-icon-target" }) &nbsp;  Male   &nbsp;
+                    @Html.RadioButton("Gender", "Female", new { @class = "sg-replace-icons sg-icon-target" }) &nbsp; Female
+                </div>
+
+                <!--Date Of Birth-->
+                <br />
+                <label class="date">Your Date of birth</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input class="text" type="date" required />
+                <br />
+                <br />
+
+
+                <!--Personal Image-->
+                <label class="label01">Your profile picture :</label>
+                <input class="input01" type="file" id="avatar"  accept="image/*">
+
+                <div>
+
+
+                </div>
+            </div>
+            <ul class="colorlib-bubbles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        </div>
+</body>
+
+
+
+
+
+<!--================================================Scripts===========================================-->
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
