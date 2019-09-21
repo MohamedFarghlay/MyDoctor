@@ -1,4 +1,6 @@
-﻿@{
+﻿@model MyDoctor.MyDoctorDB.User
+
+@{
 
     Layout = null;
 }
@@ -8,7 +10,7 @@
 
 
 <head>
-    <title>MyDoctor</title>
+    <title>SignUp</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -21,48 +23,86 @@
     <!-- //web font -->
 </head>
 
+<style>
+    .hideText{
+        display:none;
+    }
+    .alert{
+        color:darkred;
+        font-size:100%;
+        font-family:Arial, Helvetica, sans-serif;
+        font-weight:bold;
+        padding:0;
+    }
+    .requiredSign{
+        color:darkred;
+    }
+</style>
 <body>
 
     <!-- main -->
     <div class="main-w3layouts wrapper">
         <h1>SignUp</h1>
+        @*@HtmlHelper.UnobtrusiveJavaScriptEnabled = false;*@
+        
+        @Html.ValidationSummary(true, "", new { @class = " alert" })
         <div class="main-agileinfo">
             <div class="agileits-top">
-                <!--Fisrt And Last Names-->
-                <input class="text" type="text"  placeholder="First name and Last name" required="">
+                <!--Fisrt Name-->
+                @*<input class="text" type="text"  placeholder="First name" required=""><br />*@
+
+                @*<input class="text" data-val="true" data-val-length="First Name Must Be at least 3 Characters" data-val-length-max="50" data-val-length-min="3" data-val-required="First Name is required" id="FirstName" name="FirstName" type="text" value="" />*@
+                @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @placeholder = "First Name" } })
+                @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "alert" })<br /><br />
+
+                <!--Last Name-->
+                @*<input class="text" type="text" placeholder="Last name" required="">*@
+                @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @placeholder = "Last Name" } })
+                @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "alert" }) <br /><br />
 
                 <!--Email-->
-                <input class="text email" type="email"  placeholder="Email" required="">
+                @*<input class="text email" type="email"  placeholder="Email" required="">*@
+                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @placeholder = "Email", @type = "email" } })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "alert" })<br /><br />
 
                 <!--Mobile Number-->
-                <input class="text" type="text"  placeholder="Mobile Number"  required="" />
-                <br />
+                @*<input class="text" type="text"  placeholder="Mobile Number"  required="" />*@
+                @Html.EditorFor(model => model.PhoneNumner, new { htmlAttributes = new { @placeholder = "Phone Number" } })
+                @Html.ValidationMessageFor(model => model.PhoneNumner, "", new { @class = "alert" })<br /><br />
+
                 <!--Password-->
-                <input class="text" type="password"  placeholder="Password" required="">
-                <input class="text w3lpass" type="password"  placeholder="Confirm Password" required="">
+                @*<input class="text" id="newPassword" type="password"  placeholder="Password" required="">*@
+                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @placeholder = "Password", @type = "password", @id = "newpassword" } })
+                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "alert" })<br /><br />
+
+                <!--Confirmation Password-->
+                <input class="text" data-val="true" data-val-length-max="100" data-val-length-min="6" data-val-required="Confirmation password is Required" id="confirmPassword" type="password" name="ConfirmPassword" placeholder="Confirm Password" required="">
+                <span class="hideText alert field-validation-error" data-valmsg-for="ConfirmPassword" data-valmsg-replace="true"><span for="confirmPassword" class="">Confirmation Password is Required</span></span>
+                <span id="checkingConfirmaion"></span><br /><br />
+
                 <!--Gender-->
                 <div class="radio">
-                    Gender &nbsp; &nbsp;&nbsp;
-                    @Html.RadioButton("Gender", "Male", new { @class = "sg-replace-icons sg-icon-target" }) &nbsp;  Male   &nbsp;
-                    @Html.RadioButton("Gender", "Female", new { @class = "sg-replace-icons sg-icon-target" }) &nbsp; Female
+                    Gender&nbsp;<span class="requiredSign">*</span> &nbsp; &nbsp;&nbsp;
+                    @Html.RadioButtonFor(S => S.gender, "Male", new { @class = "sg-replace-icons sg-icon-target" })&nbsp; Male&nbsp;
+                    @Html.RadioButtonFor(S => S.gender, "Female", new { @class = "sg-replace-icons sg-icon-target" }) &nbsp;Female<br />
+                    @Html.ValidationMessageFor(S => S.gender, "", new { @class = "alert" })
+
+                    @*@Html.RadioButton("Gender", "Male", new { @class = "sg-replace-icons sg-icon-target" }) &nbsp;  Male   &nbsp;
+                        @Html.RadioButton("Gender", "Female", new { @class = "sg-replace-icons sg-icon-target" }) &nbsp; Female*@
                 </div>
 
                 <!--Date Of Birth-->
                 <br />
-                <label class="date">Your Date of birth</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <input class="text" type="date" required />
-                <br />
-                <br />
+                <label class="date">Your Date of birth &nbsp;<span class="requiredSign">*</span></label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                @*<input class="text" type="date" required />*@
+                @Html.EditorFor(model => model.DateOfBirth, new { htmlAttributes = new { @type = "date" } })
+                @Html.ValidationMessageFor(S => S.DateOfBirth, "", new { @class = "alert" })<br /><br />
 
 
                 <!--Personal Image-->
                 <label class="label01">Your profile picture :</label>
-                <input class="input01" type="file" id="avatar"  accept="image/*">
+                @Html.EditorFor(model => model.Image, new { htmlAttributes = new { @type = "file", @accept = "image/*" } })
 
-                <div>
-
-
-                </div>
             </div>
             <ul class="colorlib-bubbles">
                 <li></li>
@@ -87,8 +127,12 @@
                 <li></li>
             </ul>
         </div>
-        </div>
+    </div>
+
+
+
 </body>
+
 
 
 
@@ -97,3 +141,20 @@
 <!--================================================Scripts===========================================-->
 @Scripts.Render("~/bundles/jquery")
 @Scripts.Render("~/bundles/bootstrap")
+
+<script>
+
+    $('#newpassword, #confirmPassword').on('keyup', function () {
+        
+        if ($('#newpassword').val() == $('#confirmPassword').val()) {
+            if (($('#newpassword').val()) != 0 && ($('#confirmpassword').val() != 0))
+            { $('#checkingConfirmaion').html('Matching').css('color', 'darkblue'); }
+        }
+        else {
+            { $('#checkingConfirmaion').html('Not Matching').css('color', 'darkred'); }
+        }
+    });
+
+
+</script>
+

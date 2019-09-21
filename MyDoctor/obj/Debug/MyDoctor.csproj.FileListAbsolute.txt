@@ -68,3 +68,151 @@ E:\ITI Project\MyDoctor\MyDoctor\MyDoctor\obj\Debug\MyDoctor.csprojResolveAssemb
 E:\ITI Project\MyDoctor\MyDoctor\MyDoctor\obj\Debug\MyDoctor.dll
 E:\ITI Project\MyDoctor\MyDoctor\MyDoctor\obj\Debug\MyDoctor.pdb
 E:\ITI Project\MyDoctor\MyDoctor\MyDoctor\bin\System.Linq.dll
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\roslyn\csc.exe
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\roslyn\System.Collections.Immutable.dll
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\roslyn\System.Reflection.Metadata.dll
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\roslyn\vbc.exe
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\roslyn\VBCSCompiler.exe
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\roslyn\VBCSCompiler.exe.config
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\MyDoctor.dll.config
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\MyDoctor.dll
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\MyDoctor.pdb
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\Antlr3.Runtime.dll
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\EntityFramework.dll
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\EntityFramework.SqlServer.dll
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\Microsoft.AspNet.Identity.Core.dll
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\Microsoft.Owin.dll
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\Microsoft.Owin.Security.Cookies.dll
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\Microsoft.Owin.Security.dll
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\Microsoft.Owin.Security.Facebook.dll
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\Microsoft.Owin.Security.Google.dll
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\Microsoft.Owin.Security.OAuth.dll
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\Microsoft.Owin.Security.Twitter.dll
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\Microsoft.Web.Infrastructure.dll
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\Newtonsoft.Json.dll
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\Owin.dll
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\System.Linq.dll
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\System.Web.Helpers.dll
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\System.Web.Mvc.dll
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\System.Web.Optimization.dll
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\System.Web.Razor.dll
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\System.Web.WebPages.Deployment.dll
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\System.Web.WebPages.dll
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\System.Web.WebPages.Razor.dll
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\WebGrease.dll
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\EntityFramework.xml
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\EntityFramework.SqlServer.xml
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\Microsoft.Owin.xml
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\System.Web.Helpers.xml
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\System.Web.Mvc.xml
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\System.Web.Optimization.xml
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\System.Web.Razor.xml
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\System.Web.WebPages.xml
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\System.Web.WebPages.Deployment.xml
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\System.Web.WebPages.Razor.xml
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\Antlr3.Runtime.pdb
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\Newtonsoft.Json.xml
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\Microsoft.AspNet.Identity.Core.xml
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\Microsoft.Owin.Security.xml
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\Microsoft.Owin.Security.Facebook.xml
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\Microsoft.Owin.Security.Cookies.xml
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\Microsoft.Owin.Security.OAuth.xml
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\Microsoft.Owin.Security.Google.xml
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\Microsoft.Owin.Security.Twitter.xml
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\obj\Debug\MyDoctor.csprojResolveAssemblyReference.cache
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\obj\Debug\MyDoctor.dll
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\obj\Debug\MyDoctor.pdb
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\obj\Debug\MyDoctor.Migrations.InitialCreate.resources
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\obj\Debug\MyDoctor.csproj.GenerateResource.Cache
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\obj\Debug\MyDoctor.Migrations.User.resources
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\obj\Debug\MyDoctor.Migrations.User1.resources
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\obj\Debug\MyDoctor.Migrations.User2.resources
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\obj\Debug\MyDoctor.Migrations.User3.resources
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\obj\Debug\MyDoctor.Migrations.User4.resources
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\obj\Debug\MyDoctor.Migrations.User6.resources
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\obj\Debug\MyDoctor.csprojResolveAssemblyReference.cache
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\obj\Debug\MyDoctor.dll
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\obj\Debug\MyDoctor.pdb
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\roslyn\csc.exe
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\roslyn\vbc.exe
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\roslyn\VBCSCompiler.exe
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\MyDoctor.dll.config
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\MyDoctor.dll
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\MyDoctor.pdb
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\Antlr3.Runtime.dll
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\EntityFramework.dll
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\EntityFramework.SqlServer.dll
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\Microsoft.Owin.dll
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\Microsoft.Owin.Security.dll
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\Newtonsoft.Json.dll
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\Owin.dll
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\System.Linq.dll
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\System.Web.Helpers.dll
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\System.Web.Mvc.dll
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\System.Web.Optimization.dll
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\System.Web.Razor.dll
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\System.Web.WebPages.Deployment.dll
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\System.Web.WebPages.dll
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\System.Web.WebPages.Razor.dll
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\WebGrease.dll
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\EntityFramework.xml
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\EntityFramework.SqlServer.xml
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\Microsoft.Owin.xml
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\System.Web.Helpers.xml
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\System.Web.Mvc.xml
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\System.Web.Optimization.xml
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\System.Web.Razor.xml
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\System.Web.WebPages.xml
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\System.Web.WebPages.Deployment.xml
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\System.Web.WebPages.Razor.xml
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\Antlr3.Runtime.pdb
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\Newtonsoft.Json.xml
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\Microsoft.Owin.Security.xml
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\mohamed\Desktop\MyDoctorProject\create database (Entity Framework_CodeFirst Approach)\MyDoctor\MyDoctor\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
