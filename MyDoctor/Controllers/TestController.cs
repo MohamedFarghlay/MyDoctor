@@ -1,4 +1,4 @@
-﻿
+﻿using MyDoctor.MyDoctorDB;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,8 +9,31 @@ namespace MyDoctor.Controllers
 {
     public class TestController : Controller
     {
-      
-   
+        // GET: Display
+        MyDoctorDBContext DoctorDBContext = new MyDoctorDBContext();
+        MyDoctorRepository doctordb = new MyDoctorRepository();
+        public ActionResult Display()
+        {
+            Patient patient = new Patient()
+            {
+                PatientID = 1
+            };
+            Patient pa = new Patient()
+            {
+                PatientID = 4
+            };
+
+
+            List<User> users = doctordb.GetUsers();
+
+            patient.users = users.Where(p => p.ID == patient.PatientID).FirstOrDefault();
+            if (patient.users != null)
+            { return View(patient.users); }
+            else
+            {
+                return View("Error");
+            }
+        }
 
         //Get : Create
         public ActionResult Create()
@@ -19,7 +42,32 @@ namespace MyDoctor.Controllers
         }
 
         //Post : Create
-       
+        [HttpPost]
+        public ActionResult Create(User user)
+        {
+            User newUser = new MyDoctorDB.User();
+            newUser.ID = 3;
+            newUser.PatientID = 8;
+            newUser.DoctorID = 9;
+            
+            if (ModelState.IsValid)
+            {
+                
+            newUser.FirstName = user.FirstName;
+            newUser.LastName = user.LastName;
+            newUser.Email = user.Email;
+            newUser.PhoneNumner = user.PhoneNumner;
+            newUser.Password = user.Password;
+            newUser.gender = user.gender;
+            newUser.DateOfBirth = user.DateOfBirth;
+            
+            
+            doctordb.SetUser(newUser);
+
+            return View("Display",newUser);
+            }
+            return View();
+        }
 
 
     }
