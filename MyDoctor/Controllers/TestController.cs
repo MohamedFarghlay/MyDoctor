@@ -25,14 +25,8 @@ namespace MyDoctor.Controllers
 
 
             List<User> users = doctordb.GetUsers();
-
-            patient.users = users.Where(p => p.ID == patient.PatientID).FirstOrDefault();
-            if (patient.users != null)
-            { return View(patient.users); }
-            else
-            {
-                return View("Error");
-            }
+            
+            return View(users);
         }
 
         //Get : Create

@@ -14,17 +14,23 @@ namespace MyDoctor.Validation
             if(value is string)
             {
                 string phone = value.ToString();
-
-                foreach (var item in phone)
+                if (phone.ElementAt(0) != '0')
                 {
-                    if (char.IsDigit(item))
+                    return false;
+                }
+
+                else {
+                    foreach (var item in phone)
                     {
-                        flag = true;
-                    }
-                    else
-                    {
-                        flag = false;
-                        break;
+                        if (char.IsDigit(item))
+                        {
+                            flag = true;
+                        }
+                        else
+                        {
+                            flag = false;
+                            break;
+                        }
                     }
                 }
                 

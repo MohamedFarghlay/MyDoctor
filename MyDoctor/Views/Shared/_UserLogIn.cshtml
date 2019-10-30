@@ -1,0 +1,138 @@
+﻿@model MyDoctor.Models.UserLogIn
+@{
+    ViewBag.Title = "LogIn";
+
+}
+
+
+<title>Login</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+@*@Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")*@
+
+
+<!--===============================================================================================-->
+<link rel="icon" type="image/png" href="~/Templetes/LogIn/images/icons/favicon.ico" />
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="~/Templetes/LogIn/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="~/Templetes/LogIn/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="~/Templetes/LogIn/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="~/Templetes/LogIn/vendor/animate/animate.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="~/Templetes/LogIn/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="~/Templetes/LogIn/vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="~/Templetes/LogIn/vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="~/Templetes/LogIn/vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="~/Templetes/LogIn/css/util.css">
+<link rel="stylesheet" type="text/css" href="~/Templetes/LogIn/css/main.css" />
+<link href="~/Templetes/SignUp/Style.css" rel="stylesheet" />
+<!--===============================================================================================-->
+
+
+<div class="limiter">
+    <div class="container-login100">
+        <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-50">
+
+            <form class="login100-form validate-form">
+                <span class="login100-form-title p-b-33">
+                    Login
+                </span>
+
+               
+                    @*<input class="input100" style="color:black; font-size:20px; width:100%;" type="text" name="email" placeholder="Email">*@
+                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "input100",@style = "color:black; font-size:20px; width:100%;", @placeholder = "Enter Email", @type = "text" } })
+                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })<br /><br />
+                    <span class="focus-input100-1"></span>
+                    <span class="focus-input100-2"></span>
+                
+                
+                    @*<input class="input100" style="color:black; font-size:15px;" type="password" name="pass" placeholder="Password">*@
+                    @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "input100", @style = "color:black; font-size:15px;",  @placeholder = "Enter Password", @type = "password", @id = "newpassword" } })
+                    @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })<br /><br />
+                    <span class="focus-input100-1"></span>
+                    <span class="focus-input100-2"></span>
+
+                <div class="container-login100-form-btn m-t-20">
+                    <button class="login100-form-btn" type="submit">
+                        Sign in
+                    </button>
+                </div>
+
+                <div class="text-center p-t-45 p-b-4">
+                    <span class="txt1">
+                        Forgot
+                    </span>
+
+                    <a href="#" class="txt2 hov1">
+                        Username / Password ?
+                    </a>
+                    <ul class="colorlib-bubbles">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+
+            </form>
+
+        </div>
+        <ul class="colorlib-bubbles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+@*@Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")*@
+
+<!--===============================================================================================-->
+<script src="~/Templetes/LogIn/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+<script src="~/Templetes/LogIn/vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+<script src="~/Templetes/LogIn/vendor/bootstrap/js/popper.js"></script>
+<script src="~/Templetes/LogIn/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+<script src="~/Templetes/LogIn/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+<script src="~/Templetes/LogIn/vendor/daterangepicker/moment.min.js"></script>
+<script src="~/Templetes/LogIn/vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+<script src="~/Templetes/LogIn/vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+<script src="~/Templetes/LogIn/js/main.js"></script>
+
+
+
+
+
+

@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = ViewBag.title;
+}
+<title>ViewBag.title</title>
+
+
+   
+
+
+
+<form method="post">
+    @Html.AntiForgeryToken();
+    @{Html.RenderPartial("_UserLogIn"); }
+
+
+    @*<div class="container-login100-form-btn m-t-20">
+        <button class="login100-form-btn" type="submit">
+            Sign in
+        </button>
+    </div>*@
+
+
+    @*<input style="FONT-WEIGHT: 500;color: #fff3f0;font-size: 20px;margin-bottom: 0;" id="btnSubmit" type="submit" value="LogIn">*@
+</form>
+

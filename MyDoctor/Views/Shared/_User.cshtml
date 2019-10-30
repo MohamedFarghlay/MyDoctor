@@ -37,6 +37,9 @@
     .requiredSign{
         color:darkred;
     }
+    .notValid{
+
+    }
 </style>
 <body>
 
@@ -64,7 +67,7 @@
                 @*<input class="text email" type="email"  placeholder="Email" required="">*@
                 @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @placeholder = "Email", @type = "email" } })
                 @Html.ValidationMessageFor(model => model.Email, "", new { @class = "alert" })<br /><br />
-
+                <p class="text-center alert pp1"></p>
                 <!--Mobile Number-->
                 @*<input class="text" type="text"  placeholder="Mobile Number"  required="" />*@
                 @Html.EditorFor(model => model.PhoneNumner, new { htmlAttributes = new { @placeholder = "Phone Number" } })
@@ -95,8 +98,10 @@
                 <br />
                 <label class="date">Your Date of birth &nbsp;<span class="requiredSign">*</span></label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 @*<input class="text" type="date" required />*@
-                @Html.EditorFor(model => model.DateOfBirth, new { htmlAttributes = new { @type = "date" } })
+              
+                @Html.EditorFor(model => model.DateOfBirth, new { htmlAttributes = new { @type = "date" ,@min= "1940-01-01" ,@max= "2005-01-1" } })
                 @Html.ValidationMessageFor(S => S.DateOfBirth, "", new { @class = "alert" })<br /><br />
+
 
 
                 <!--Personal Image-->
