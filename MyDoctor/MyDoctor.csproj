@@ -215,25 +215,18 @@
     <Compile Include="Migrations\201908211824584_User6.Designer.cs">
       <DependentUpon>201908211824584_User6.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201908231940330_User5.cs" />
-    <Compile Include="Migrations\201908231940330_User5.Designer.cs">
-      <DependentUpon>201908231940330_User5.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\EncryptPassword.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\UserLogIn.cs" />
     <Compile Include="MyDoctorDB\MyDoctorDBContext.cs" />
     <Compile Include="MyDoctorDB\MyDoctorRepository.cs" />
     <Compile Include="MyDoctorDB\Patient.cs" />
     <Compile Include="MyDoctorDB\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="Validation\CheckPassword.cs" />
     <Compile Include="Validation\EmailExist.cs" />
-    <Compile Include="Validation\EmailNotExist.cs" />
     <Compile Include="Validation\OnlyInt.cs" />
     <Compile Include="Validation\OnlyLetters.cs" />
     <Compile Include="Validation\PasswordValidation.cs" />
@@ -373,9 +366,6 @@
     <Content Include="Views\Shared\ConfirmationDeleting.cshtml" />
     <Content Include="Views\Patient\ConfirmationDeleting.cshtml" />
     <Content Include="Views\Patient\Delete.cshtml" />
-    <Content Include="Views\Shared\LogIn.cshtml" />
-    <Content Include="Views\Shared\_UserLogIn.cshtml" />
-    <Content Include="Views\Patient\LogIn.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -424,9 +414,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908211824584_User6.resx">
       <DependentUpon>201908211824584_User6.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908231940330_User5.resx">
-      <DependentUpon>201908231940330_User5.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

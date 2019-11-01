@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width" />
     <title>MyDoctor</title>
 
-
+ 
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>MyDoctor</title>
 
     @*@Styles.Render("~/Content/css")
-        @Scripts.Render("~/bundles/modernizr")*@
+    @Scripts.Render("~/bundles/modernizr")*@
 
 
 
@@ -36,11 +36,7 @@
     <link rel="stylesheet" href="~/Templetes/Index/css/slick.css">
     <!-- style CSS -->
     <link rel="stylesheet" href="~/Templetes/Index/css/style.css">
-    <style>
-        .loggedIn {
-            display: none;
-        }
-    </style>
+
 </head>
 
 
@@ -57,8 +53,8 @@
             <div class="row align-items-center">
                 <div class="col-lg-12">
                     <nav class="navbar navbar-expand-lg navbar-light">
-                        <img src="~/Templetes/Index/img/favicon.png" alt="Logo" />
-                        @Html.ActionLink("MyDoctor", "Index", "Home", new { @class = "navbar-brand" })
+                            <img src="~/Templetes/Index/img/favicon.png" alt="Logo" />
+                            @Html.ActionLink("MyDoctor","Index","Home",new {@class= "navbar-brand" })
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                                 aria-expanded="false" aria-label="Toggle navigation">
@@ -68,7 +64,7 @@
                         <div class="collapse navbar-collapse main-menu-item justify-content-center"
                              id="navbarSupportedContent">
                             <ul class="navbar-nav align-items-center">
-
+                               
                                 <li class="nav-item nav-link">
                                     @Html.ActionLink("Home", "Index", "Home")
                                 </li>
@@ -79,36 +75,19 @@
                                 <li class="nav-item nav-link">
                                     @Html.ActionLink("Doctors", "Doctors", "Doctor")
                                 </li>
-
-
+                                   
+                                
                                 <li class="nav-item nav-link">
                                     @Html.ActionLink("Contact", "Contact", "Home")
 
                                 </li>
-
+                               
                             </ul>
-                        </div>
-
-
-                        <div class="loggedIn">
-                            <div class="nice-select" tabindex="0">
-                                <span class="current">My Profile</span>
-                                <ul class="list">
-                                    @*<li data-value="UserFName" class="option focus">UserFName</li>
-                                    <li data-value="My Profile" class="option selected">My Profile</li>
-                                    <li data-value="Logout" class="option">Logout</li>*@
-                                    <li>@Html.ActionLink("UserFName", "PatientDashboard", "Patient")</li>
-                                    <li>@Html.ActionLink("My Profile", "MyProfile", "Patient")</li>
-                                    <li>@Html.ActionLink("Logout", "Logout", "Patient")</li>
-                                </ul>
-                            </div>
-                        </div>
-
-
-
+                        </div>   
                         <!-- Button trigger modal -->
                         <button type="button" class="btn btn-primary btn-hide" data-toggle="modal" data-target="#exampleModalCenter" data-backdrop="false">
                             Register Now
+                           
                         </button>
                         <!-- Modal -->
                         <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -121,22 +100,20 @@
                                         </button>
                                     </div>
                                     <div class="modal-body">
-
+                                        
                                         @Html.ActionLink("As A Doctor", "DoctorRegister", "Doctor", new { @class = "as-doctor btn_2 d-none d-lg-block " })
                                         @Html.ActionLink("As A Patient", "PatientRegister", "Patient", new { @class = "as-patient btn_2 d-none d-lg-block " })
                                         Aleardy Have An Account ?
-
-                                        @Html.ActionLink(" Log In", "LogIn", "Home", new { @class = "txt2 hov1" })
+                                        
+                                        @Html.ActionLink(" Log In", "LogIn", "Home",new {@class= "txt2 hov1" })
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-outline-danger float-none " data-dismiss="modal">Close</button>
-                                    </div>
+                                        </div>
                                 </div>
                             </div>
                         </div>
-
-
-                        @*@Html.ActionLink("SignUp", "SignUp", "Home",new {@class="btn_2 d-none d-lg-block" })*@
+                        @*@Html.ActionLink("SignUp", "SignUp", "Home",new {@class="btn_2 d-none d-lg-block" })*@    
                     </nav>
                 </div>
             </div>
@@ -148,7 +125,7 @@
 
 
 
-    <div class="container body-content">
+    <div  class="container body-content">
         @RenderBody()
     </div>
 

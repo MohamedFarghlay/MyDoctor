@@ -146,4 +146,3 @@ E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\obj\Debug\MyDoctor.Migrations
 E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\obj\Debug\MyDoctor.Migrations.User3.resources
 E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\obj\Debug\MyDoctor.Migrations.User4.resources
 E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\obj\Debug\MyDoctor.Migrations.User6.resources
-E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\obj\Debug\MyDoctor.Migrations.User5.resources
