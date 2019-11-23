@@ -19,7 +19,6 @@ namespace MyDoctor.MyDoctorDB
     {
         //ID Vaildation 
         [Key]
-        [OnlyInt(ErrorMessage = "This Valid Must accept only integers")]
         public int ID { get; set; }
 
         //Firat Name Validation
@@ -51,7 +50,7 @@ namespace MyDoctor.MyDoctorDB
 
         //Password Validation
         [Required(ErrorMessage ="Password is Required")]
-        [PasswordValidation(ErrorMessage ="Password Must Contains Capital, Small Letters,  And Numbers")]
+        //[PasswordValidation(ErrorMessage ="Password Must Contains Capital, Small Letters,  And Numbers")]
         [StringLength(100,ErrorMessage ="The length of Password must be at least 6",MinimumLength =6)]
         public string Password { get; set; }
 
