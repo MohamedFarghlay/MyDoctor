@@ -135,7 +135,6 @@ E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\Microsoft.Owin.Security.O
 E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\Microsoft.Owin.Security.Google.xml
 E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\Microsoft.Owin.Security.Twitter.xml
 E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\obj\Debug\MyDoctor.csprojResolveAssemblyReference.cache
 E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\obj\Debug\MyDoctor.dll
 E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\obj\Debug\MyDoctor.pdb
 E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\obj\Debug\MyDoctor.Migrations.InitialCreate.resources
@@ -147,3 +146,10 @@ E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\obj\Debug\MyDoctor.Migrations
 E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\obj\Debug\MyDoctor.Migrations.User4.resources
 E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\obj\Debug\MyDoctor.Migrations.User6.resources
 E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\obj\Debug\MyDoctor.Migrations.User5.resources
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\obj\Debug\MyDoctor.Migrations.User7.resources
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\obj\Debug\MyDoctor.Migrations.AppointmentTable.resources
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\obj\Debug\MyDoctor.Migrations.PatientAppointment.resources
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\obj\Debug\MyDoctor.Migrations.Appointments.resources
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\obj\Debug\MyDoctor.Migrations.Appointments1.resources
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\obj\Debug\MyDoctor.Migrations.Appointments2.resources
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\obj\Debug\MyDoctor.csprojResolveAssemblyReference.cache

@@ -8,28 +8,24 @@ using System.Web;
 
 namespace MyDoctor.Validation
 {
-    public class CheckPassword : ValidationAttribute
+    public class CheckPasswordValidation : ValidationAttribute
     {
         public static User user { get; set; }
-
-
-
         public override bool IsValid(object value)
         {
-
-            if (value is string)
+            if(value is string)
             {
-                if (value.ToString().Length < 6) 
+                string UserPassword = value.ToString();
+
+                if (UserPassword.Length < 6)
                 {
                     return false;
                 }
-                string password = EncryptPassword.encryptPassword(value.ToString());
-
-                if (user.Password == password)
+                string EncryptedUserPassword = EncryptPassword.encryptPassword(UserPassword);
+                if (user.Password == EncryptedUserPassword)
                 {
                     return true;
                 }
-
             }
             return false;
         }

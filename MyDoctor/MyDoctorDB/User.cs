@@ -46,7 +46,7 @@ namespace MyDoctor.MyDoctorDB
         [StringLength(11,ErrorMessage ="Phone number Must be 11 numbers",MinimumLength =11)]
         [PhoneVaildation(ErrorMessage ="Phone Can't Contain Letters, Only Digit and start with 0")]
         [DisplayName("Phone Number")]
-        public string PhoneNumner { get; set; }
+        public string PhoneNumber { get; set; }
 
         //Password Validation
         [Required(ErrorMessage ="Password is Required")]

@@ -1,10 +1,43 @@
 ﻿
-@{
+@*@{
     ViewBag.Title = "LogIn";
     
+}*@
+
+
+
+
+
+@{
+    ViewBag.Title = ViewBag.title;
 }
+<title>ViewBag.title</title>
 
 
+
+
+
+
+<form method="post">
+    @Html.AntiForgeryToken();
+    @{Html.RenderPartial("_UserLogIn"); }
+
+
+    @*<div class="container-login100-form-btn m-t-20">
+            <button class="login100-form-btn" type="submit">
+                Sign in
+            </button>
+        </div>*@
+
+
+    @*<input style="FONT-WEIGHT: 500;color: #fff3f0;font-size: 20px;margin-bottom: 0;" id="btnSubmit" type="submit" value="LogIn">*@
+</form>
+
+
+
+
+
+<!--
     <title>Login</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,9 +45,11 @@
   
     @*@Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")*@
+    -->
 
+<!--
 
-    <!--===============================================================================================-->
+    @*<!--===============================================================================================-->
     <link rel="icon" type="image/png" href="~/Templetes/LogIn/images/icons/favicon.ico" />
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="~/Templetes/LogIn/vendor/bootstrap/css/bootstrap.min.css">
@@ -36,10 +71,10 @@
     <link rel="stylesheet" type="text/css" href="~/Templetes/LogIn/css/util.css">
     <link rel="stylesheet" type="text/css" href="~/Templetes/LogIn/css/main.css" />
     <link href="~/Templetes/SignUp/Style.css" rel="stylesheet" />
-    <!--===============================================================================================-->
+    <!--===============================================================================================-->*@
     
 
-    <div class="limiter">
+    @*<div class="limiter">
         <div class="container-login100">
             <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-50">
     
@@ -104,7 +139,7 @@
                 <li></li>
             </ul>
         </div>
-    </div>
+    </div>*@
 
 
 
@@ -112,7 +147,7 @@
     @*@Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")*@
 
-    <!--===============================================================================================-->
+    @*<!--===============================================================================================-->
     <script src="~/Templetes/LogIn/vendor/jquery/jquery-3.2.1.min.js"></script>
     <!--===============================================================================================-->
     <script src="~/Templetes/LogIn/vendor/animsition/js/animsition.min.js"></script>
@@ -127,9 +162,10 @@
     <!--===============================================================================================-->
     <script src="~/Templetes/LogIn/vendor/countdowntime/countdowntime.js"></script>
     <!--===============================================================================================-->
-    <script src="~/Templetes/LogIn/js/main.js"></script>
+    <script src="~/Templetes/LogIn/js/main.js"></script>*@
 
 
 
 
 
+    -->

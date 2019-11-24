@@ -15,63 +15,80 @@ namespace MyDoctor.Controllers
         // GET: Patient
         MyDoctorDBContext DoctorDBContext = new MyDoctorDBContext();
         MyDoctorRepository doctordb = new MyDoctorRepository();
+
         Patient patientUser = new Patient();
-      
+
+
+
         //Get : Dashboard 
-        public ActionResult PatientDashboard(string userName)
+        public ActionResult PatientDashboard(string userEmail)
         {
-            if (Session["username"] == null)
+
+            if (userEmail == null)
             {
-                return View("LogIn");
+                return RedirectToAction("LogIn", "Home");
+                //return View("LogIn");
             }
             else {
-                ViewBag.userName = userName;
+                ViewBag.useremail = userEmail;
                 return View();
             }
         }
 
 
         //Get : MyProfile
-        public ActionResult MyProfile(int? id=20)
+        //[ValidateAntiForgeryToken]
+        public ActionResult MyProfile(int? id)
         {
-            if (id != null)
+            if (Session["userEmail"] != null)
             {
+                id = int.Parse(Session["LoggedPatientID"].ToString());
 
-
-                List<User> users = doctordb.GetUsers();
-
-                Patient patient = new Patient();
-                patient.users = users.Where(user => user.ID == id).FirstOrDefault();
-                if (patient.users != null)
+                if (id != null)
                 {
-                    return View(patient.users);
 
+
+                    List<User> users = doctordb.GetUsers();
+
+                    Patient patient = new Patient();
+                    patient.users = users.Where(user => user.ID == id).FirstOrDefault();
+                    if (patient.users != null)
+                    {
+                        return View(patient.users);
+
+                    }
+                    else
+                    {
+                        return RedirectToAction("Error", "Home");
+                    }
                 }
-                else
-                {
-                    return RedirectToAction("Error", "Home");
-                }
+
+                return RedirectToAction("Error", "Home");
             }
-
-            return RedirectToAction("Error", "Home");
-
+            return RedirectToAction("LogIn", "Home");
 
 
         }
 
 
         //Get  : Edit
+        //[ValidateAntiForgeryToken]
         public ActionResult Edit(int? id)
         {
-
-            EmailExist.flag = true;
-
-            var user = DoctorDBContext.Users.Where(u => u.ID == id).FirstOrDefault();
-            if (user != null)
+            if (Session["userEmail"] != null)
             {
-                return View(user);
+                id = int.Parse(Session["LoggedPatientID"].ToString());
+                EmailExist.flag = true;
+
+                var user = DoctorDBContext.Users.Where(u => u.ID == id).FirstOrDefault();
+                if (user != null)
+                {
+                    return View(user);
+                }
+                return RedirectToAction("Error", "Home");
             }
-            return RedirectToAction("Error", "Home");
+            return RedirectToAction("LogIn", "Home");
+
         }
 
         //Post : Edit
@@ -80,27 +97,33 @@ namespace MyDoctor.Controllers
         public ActionResult Edit(User user)
         {
 
-
-            User targetsUser = new MyDoctorDB.User();
-            targetsUser = DoctorDBContext.Users.Where(u => u.ID == user.ID).FirstOrDefault();
-            if (targetsUser != null)
+            if (Session["userEmail"] != null)
             {
-                targetsUser.FirstName = user.FirstName;
-                targetsUser.LastName = user.LastName;
-                targetsUser.Email = user.Email;
-                targetsUser.PhoneNumner = user.PhoneNumner;
-                targetsUser.Password = user.Password;
+                User targetsUser = new MyDoctorDB.User();
+                targetsUser = DoctorDBContext.Users.Where(u => u.ID == user.ID).FirstOrDefault();
+                if (targetsUser != null)
+                {
+                    if (ModelState.IsValid)
+                    {
+                        user.Password = EncryptPassword.encryptPassword(user.Password);
+                        targetsUser.FirstName = user.FirstName;
+                        targetsUser.LastName = user.LastName;
+                        targetsUser.Email = user.Email;
+                        targetsUser.PhoneNumber = user.PhoneNumber;
+                        targetsUser.Password = user.Password;
 
-                targetsUser.DateOfBirth = user.DateOfBirth;
+                        targetsUser.DateOfBirth = user.DateOfBirth;
+                        doctordb.UpdateUser(targetsUser);
 
-                doctordb.UpdateUser(targetsUser);
-                return RedirectToAction("Display", "Test");
+                        ViewBag.useremail = targetsUser.Email;
+                        return View("PatientDashboard");
+                    }
+
+                }
+
+                return View(user);
             }
-
-            return View(user);
-
-
-
+            return RedirectToAction("LogIn", "Home");
         }
 
         //Get : Register
@@ -114,41 +137,42 @@ namespace MyDoctor.Controllers
         //[ValidateAntiForgeryToken]
         public ActionResult PatientRegister(User user)
         {
-
-            User newUser = new User();
-            Patient patient = new Patient();
-            if (ModelState.IsValid)
+            if (Session["userEmail"] == null)
             {
-                string EncryptedPassword = EncryptPassword.encryptPassword(user.Password);
-                user.Password = EncryptedPassword;
-                user.PatientID = 1;
+                User newUser = new User();
+                Patient patient = new Patient();
+                if (ModelState.IsValid)
+                {
+                    //Encrypt The Password Using MD5 Encryption
+                    string EncryptedPassword = EncryptPassword.encryptPassword(user.Password);
 
-                patient.users = user;
-                patient.PatientID = 0;
-                doctordb.SetPatient(patient);
+                    //set user password to encrypted password
+                    user.Password = EncryptedPassword;
 
-              
+                    //this User is a Patient 
+                    user.PatientID = 1;
 
-                //doctordb.UpdateUser(user);
-                //user.PatientID = patientID;
-                //user.DoctorID = 0;
-                ////new patient
-                ////user.PatientID++;
-                ////encrypt the password
-                //string EncryptedPassword = EncryptPassword.encryptPassword(user.Password);
-                ////string decryptedPassword = DecryptPassword.decryptPassword(EncryptedPassword);
-                //newUser.FirstName = user.FirstName;
-                //newUser.LastName = user.LastName;
-                //newUser.Email = user.Email;
-                //newUser.PhoneNumner = user.PhoneNumner;
-                //newUser.Password = EncryptedPassword;
-                //newUser.gender = user.gender;
-                ////newUser.DateOfBirth = user.DateOfBirth;
-                //doctordb.SetUser(newUser);
+                    //set User's Data to patient
+                    patient.users = user;
 
-                return View("PatientDashboard");
+                    //set patient into database
+                    doctordb.SetPatient(patient);
+
+                    //Start A new Session
+                    Session["userEmail"] = user.Email;
+
+                    //store the id of the patient 
+                    Session["LoggedPatientID"] = user.PatientID;
+
+                    //store the email of the patient
+                    ViewBag.useremail = user.Email;
+
+
+                    return View("PatientDashboard");
+                }
+                return View(user);
             }
-            return View(user);
+            return View("PatientDashboard");
         }
 
 
@@ -162,13 +186,13 @@ namespace MyDoctor.Controllers
                 return View("PatientDashboard", new { username = Session["username"].ToString() });
             }
 
-            
+
             return View("LogIn");
         }
 
         //Post : LogIn
         [HttpPost]
-        //[ValidateAntiForgeryToken]
+        [ValidateAntiForgeryToken]
         public ActionResult LogIn(UserLogIn user)
         {
             if ((user.Password == null) || (user.Email == null))
@@ -177,47 +201,94 @@ namespace MyDoctor.Controllers
             }
 
             string pass = EncryptPassword.encryptPassword(user.Password);
-
-
             //Check The Existance of the user
-
             var userLoggedIn = DoctorDBContext.Users.SingleOrDefault(u => u.Email == user.Email && u.Password == pass);
             if (userLoggedIn != null) //found the user
             {
-                ViewBag.message = "Logged In ";
-                ViewBag.triedOnce = "Yes";
 
+                ViewBag.triedOnce = "Yes";
                 Session["username"] = userLoggedIn.FirstName;
                 return View("PatientDashboard", new { username = userLoggedIn.FirstName });
             }
             else
             {
                 ViewBag.triedOnce = "Yes";
-               
+
                 return View();
             }
         }
 
         //Get : ConfirmationDeleting
-        public ActionResult ConfirmationDeleting()
+        public ActionResult ConfirmationDeleting2(int? id)
         {
-            return View();
+            if (Session["userEmail"] != null)
+            {
+                id = int.Parse(Session["LoggedPatientID"].ToString());
+                if (id != null)
+                {
+                    User deletedUser = DoctorDBContext.Users.Where(u => u.ID == id).FirstOrDefault();
+                    if (deletedUser != null)
+                    {
+                        ViewBag.deletedUserID = id;
+                        return View();
+                    }
+
+                }
+                return View("Error");
+            }
+            return RedirectToAction("LogIn", "Home");
         }
 
+        //Post : ConfirmationDeleting
+        [HttpPost]
+        public ActionResult ConfirmationDeleting2(UserDeleteInfo deletedUser)
+        {
+            if (Session["userEmail"] != null)
+            {
+                if (ModelState.IsValid)
+                {
+                    string DeletedUserPassword = EncryptPassword.encryptPassword(deletedUser.password);
+                    User targetUser = DoctorDBContext.Users.Where(u => u.ID == deletedUser.ID).FirstOrDefault();
+                    if (targetUser != null)
+                    {
+                        if (targetUser.Password.Equals(DeletedUserPassword))
+                        {
+                            Delete(targetUser);
+                            Logout();
+                            return RedirectToAction("Index", "Home");
+                        }
+                        else
+                        {
+
+                            return View();
+                        }
+                    }
+
+                }
+                return View();
+            }
+            return RedirectToAction("LogIn", "Home");
+        }
 
         //Get : Delete
+        [ValidateAntiForgeryToken]
         public ActionResult Delete(int? id)
         {
-            if (id != null)
+            if (Session["userEmail"] != null)
             {
-                var deletedUser = DoctorDBContext.Users.Where(u => u.ID == id).FirstOrDefault();
-                if (deletedUser != null)
+                id =int.Parse(Session["LoggedPatientID"].ToString());
+                if (id != null)
                 {
-                    return View(deletedUser);
+                    var deletedUser = DoctorDBContext.Users.Where(u => u.ID == id).FirstOrDefault();
+                    if (deletedUser != null)
+                    {
+                        return View(deletedUser);
+                    }
                 }
+                //return RedirectToAction("Error", "Home");
+                return View("Error");
             }
-            //return RedirectToAction("Error", "Home");
-            return View("Error");
+            return RedirectToAction("LogIn", "Home");
         }
 
         //Post : Delete
@@ -225,19 +296,56 @@ namespace MyDoctor.Controllers
         //[ValidateAntiForgeryToken]
         public ActionResult Delete(User user)
         {
-            User deletedUser = DoctorDBContext.Users.Where(u => u.ID == user.ID).FirstOrDefault();
-            if (deletedUser != null)
+            if (Session["userEmail"] != null)
             {
-                //First Delete The Patient That Hold this user
-                doctordb.DeletePatient(deletedUser.ID);
+                User deletedUser = DoctorDBContext.Users.Where(u => u.ID == user.ID).FirstOrDefault();
+                if (deletedUser != null)
+                {
+                    //First Delete The Patient That Hold this user
+                    doctordb.DeletePatient(deletedUser.ID);
 
-                //then delete the user
-                doctordb.DeleteUser(deletedUser);
-                return RedirectToAction("Display", "Test");
+                    //then delete the user
+                    doctordb.DeleteUser(deletedUser);
+
+                }
+
+                return RedirectToAction("Error", "Home");
             }
-
-            return RedirectToAction("Error", "Home");
+            return RedirectToAction("LogIn", "Home");
 
         }
+
+        //Get : Logout
+        public ActionResult Logout()
+        {
+            Session["userEmail"] = null;
+            return RedirectToAction("LogIn", "Home");
+        }
+
+        
+
+
+        //Get : MyAppointments
+        public ActionResult MyAppointments(int? id)
+        {
+            if (Session["userEmail"] != null)
+            {
+                id = int.Parse(Session["LoggedPatientID"].ToString());
+                if (id != null)
+                {
+                    List<Appointment> appointments = DoctorDBContext.Appointments.Where(app => app.PatintID == id).ToList();
+                    if (appointments.Count != 0)
+                    {
+                        ViewBag.NotAppointments = "false";
+                        return View(appointments);
+                    }
+                    ViewBag.NotAppointments = "true";
+                    return View();
+                }
+                return View("Error");
+            }
+            return RedirectToAction("LogIn", "Home");
+        }
+        
     }
 }

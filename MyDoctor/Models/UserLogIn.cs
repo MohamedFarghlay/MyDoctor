@@ -15,6 +15,7 @@ namespace MyDoctor.Models
         public string Email { get; set; }
 
         [Required(ErrorMessage = "Password is Required")]
+        //[StringLength(100, ErrorMessage = "The length of Password must be at least 6", MinimumLength = 6)]
         [CheckPassword(ErrorMessage ="Password is wrong, Try Again")]
         public string Password { get; set; }
        

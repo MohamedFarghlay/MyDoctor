@@ -1,0 +1,97 @@
+﻿
+@{
+    string email = ViewBag.useremail;
+    MyDoctor.MyDoctorDB.MyDoctorDBContext DoctorDb = new MyDoctor.MyDoctorDB.MyDoctorDBContext();
+    MyDoctor.MyDoctorDB.User patientUser = new MyDoctor.MyDoctorDB.User();
+    patientUser = DoctorDb.Users.Where(u => u.Email == email).FirstOrDefault();
+
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title id="layout3Title"></title>
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    @*@Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")*@
+
+
+
+
+    <link rel="icon" href="~/Templetes/Index/img/favicon.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/Templetes/Index/css/bootstrap.min.css">
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="~/Templetes/Index/css/animate.css">
+    <!-- owl carousel CSS -->
+    <link rel="stylesheet" href="~/Templetes/Index/css/owl.carousel.min.css">
+    <!-- themify CSS -->
+    <link rel="stylesheet" href="~/Templetes/Index/css/themify-icons.css">
+    <!-- flaticon CSS -->
+    <link rel="stylesheet" href="~/Templetes/Index/css/flaticon.css">
+    <!-- magnific popup CSS -->
+    <link rel="stylesheet" href="~/Templetes/Index/css/magnific-popup.css">
+    <!-- nice select CSS -->
+    <link rel="stylesheet" href="~/Templetes/Index/css/nice-select.css">
+    <!-- swiper CSS -->
+    <link rel="stylesheet" href="~/Templetes/Index/css/slick.css">
+    <!-- style CSS -->
+    <link rel="stylesheet" href="~/Templetes/Index/css/style.css">
+
+</head>
+
+
+
+
+
+<body>
+
+
+
+    <!--::header part start::-->
+    <header class="main_menu home_menu menu_fixed show-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg navbar-light" style="margin-left:85%;">
+                        <div class="loggedIn">
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropBtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    @Html.ActionLink("My Appointments", "MyAppointments", "Patient", new { id = patientUser.ID }, new { @class = "dropdown-item" })
+                                    @Html.ActionLink("My Profile", "MyProfile", "Patient", new { id = patientUser.ID }, new { @class = "dropdown-item" })
+                                    @Html.ActionLink("logout", "logout", "Patient", new { @class = "dropdown-item" })
+
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header part end-->
+
+
+
+
+
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

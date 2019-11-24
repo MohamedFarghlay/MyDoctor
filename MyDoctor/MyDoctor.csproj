@@ -219,12 +219,38 @@
     <Compile Include="Migrations\201908231940330_User5.Designer.cs">
       <DependentUpon>201908231940330_User5.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201908241502391_User7.cs" />
+    <Compile Include="Migrations\201908241502391_User7.Designer.cs">
+      <DependentUpon>201908241502391_User7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908251357505_AppointmentTable.cs" />
+    <Compile Include="Migrations\201908251357505_AppointmentTable.Designer.cs">
+      <DependentUpon>201908251357505_AppointmentTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908251539160_PatientAppointment.cs" />
+    <Compile Include="Migrations\201908251539160_PatientAppointment.Designer.cs">
+      <DependentUpon>201908251539160_PatientAppointment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908252119251_Appointments.cs" />
+    <Compile Include="Migrations\201908252119251_Appointments.Designer.cs">
+      <DependentUpon>201908252119251_Appointments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908252148582_Appointments1.cs" />
+    <Compile Include="Migrations\201908252148582_Appointments1.Designer.cs">
+      <DependentUpon>201908252148582_Appointments1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908252206598_Appointments2.cs" />
+    <Compile Include="Migrations\201908252206598_Appointments2.Designer.cs">
+      <DependentUpon>201908252206598_Appointments2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\EncryptPassword.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\UserDeleteInfo.cs" />
     <Compile Include="Models\UserLogIn.cs" />
+    <Compile Include="MyDoctorDB\Appointment.cs" />
     <Compile Include="MyDoctorDB\MyDoctorDBContext.cs" />
     <Compile Include="MyDoctorDB\MyDoctorRepository.cs" />
     <Compile Include="MyDoctorDB\Patient.cs" />
@@ -232,8 +258,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Validation\CheckPassword.cs" />
+    <Compile Include="Validation\CheckPasswordValidation.cs" />
     <Compile Include="Validation\EmailExist.cs" />
     <Compile Include="Validation\EmailNotExist.cs" />
+    <Compile Include="Validation\ExistUser.cs" />
     <Compile Include="Validation\OnlyInt.cs" />
     <Compile Include="Validation\OnlyLetters.cs" />
     <Compile Include="Validation\PasswordValidation.cs" />
@@ -376,6 +404,9 @@
     <Content Include="Views\Shared\LogIn.cshtml" />
     <Content Include="Views\Shared\_UserLogIn.cshtml" />
     <Content Include="Views\Patient\LogIn.cshtml" />
+    <Content Include="Views\Shared\_Layout3.cshtml" />
+    <Content Include="Views\Patient\ConfirmationDeleting2.cshtml" />
+    <Content Include="Views\Patient\MyAppointments.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -427,6 +458,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908231940330_User5.resx">
       <DependentUpon>201908231940330_User5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908241502391_User7.resx">
+      <DependentUpon>201908241502391_User7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908251357505_AppointmentTable.resx">
+      <DependentUpon>201908251357505_AppointmentTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908251539160_PatientAppointment.resx">
+      <DependentUpon>201908251539160_PatientAppointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908252119251_Appointments.resx">
+      <DependentUpon>201908252119251_Appointments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908252148582_Appointments1.resx">
+      <DependentUpon>201908252148582_Appointments1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908252206598_Appointments2.resx">
+      <DependentUpon>201908252206598_Appointments2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

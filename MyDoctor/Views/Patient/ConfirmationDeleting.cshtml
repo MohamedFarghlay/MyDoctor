@@ -10,5 +10,10 @@
 
 
 <h3 class="text-center" style="margin-top:4%;">Please Enter Password To Confirm your Deletion </h3>
-<input style="width:25%; margin-left:37%;margin-top:2%; height:33px; border-radius:15px;" type="password" placeholder="Password Here" id="password" class="input-group text-center" />
-<button class="btn btn-danger" style="margin-left:40%;margin-top:2%; width:20%;">Delete</button>
+<form method="post" >
+    
+    <input style="width:25%; margin-left:37%;margin-top:2%; height:33px; border-radius:15px;" type="password" placeholder="Password Here" class="text-center" value=""/>
+    <input type="hidden" value="@ViewBag.deletedUserID" />
+
+    <button class="btn btn-danger" style="margin-left:40%;margin-top:2%; width:20%;">Delete</button>
+</form>

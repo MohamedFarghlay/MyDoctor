@@ -1,5 +1,14 @@
-﻿@{
+﻿
+
+@{
+
     ViewBag.Title = "PatientDashboard";
+    string email = ViewBag.useremail;
+    MyDoctor.MyDoctorDB.MyDoctorDBContext DoctorDb = new MyDoctor.MyDoctorDB.MyDoctorDBContext();
+    MyDoctor.MyDoctorDB.User patientUser = new MyDoctor.MyDoctorDB.User();
+    patientUser = DoctorDb.Users.Where(u => u.Email == email).FirstOrDefault();
+    Layout = "~/Views/Shared/_Layout3.cshtml";
+    
 }
 
 
@@ -39,7 +48,6 @@
 <br />
 <br />
 <br />
-
 <p   style="color:black; font-size:450%;font-family:Arial, Helvetica, sans-serif;" class="text-lg-center p01">Find the Best Doctors</p>
     <p class="text-center" style="color:black;font-size:350%;font-family:Arial, Helvetica, sans-serif;">Search Now !</p>
     <div class="container h-100">
@@ -62,3 +70,21 @@
         </p>
     </div>
 
+
+
+@*<a href="~/Views/Patient/MyProfile"></a>*@
+<script>
+   
+
+    
+    var patientFName = "@patientUser.FirstName";
+    var greeting = "Welcome, " + patientFName.toString();
+    document.getElementById("dropBtn").innerHTML = greeting;
+
+
+    var title = document.getElementById("layout3Title");
+    title.innerHTML = "My Dashboard"
+   
+      
+
+</script>

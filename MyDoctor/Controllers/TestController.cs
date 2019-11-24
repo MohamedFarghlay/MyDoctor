@@ -25,6 +25,7 @@ namespace MyDoctor.Controllers
 
 
             List<User> users = doctordb.GetUsers();
+            patient.users = users.Where(u => u.ID == patient.PatientID).FirstOrDefault();
             
             return View(users);
         }
@@ -50,7 +51,7 @@ namespace MyDoctor.Controllers
             newUser.FirstName = user.FirstName;
             newUser.LastName = user.LastName;
             newUser.Email = user.Email;
-            newUser.PhoneNumner = user.PhoneNumner;
+            newUser.PhoneNumber = user.PhoneNumber;
             newUser.Password = user.Password;
             newUser.gender = user.gender;
             newUser.DateOfBirth = user.DateOfBirth;

@@ -235,5 +235,16 @@ namespace MyDoctor.MyDoctorDB
         }
 
 
+        
+        //Get All Appointments
+        public List<Appointment> GetAppointments()
+        {
+            MyDoctorDBContext doctorDB = new MyDoctorDBContext();
+            List<Appointment> appointments = doctorDB.Appointments.ToList();
+            return appointments;
+        }
+        
+
+
     }
 }

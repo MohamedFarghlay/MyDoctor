@@ -2,10 +2,16 @@
 
 @{
     ViewBag.Title = "MyProfile";
+
+    //Layout = "~/Views/Shared/_Layout3.cshtml";
 }
 
 
 <style>
+    .hide-header{
+        display:none;
+    }
+    
     .in01 {
         margin-left: 20%;
     }
@@ -99,16 +105,23 @@
     .loggedIn{
         display:inline-block;
     }
+    .btn-back{
+        position:absolute;
+        margin-top:12%;
+    }
 </style>
 <!--Edit Profile-->
-
+@Html.ActionLink("<== Back To Dashboard", "PatientDashboard", "Patient", new { @class = "btn btn-primary btn-back" }) 
 
 <div class="form-group">
+    @Html.AntiForgeryToken();
     <label class="col-md-3 control-label"></label>
     <div class="col-md-8">
         @*<input class="btn btn-outline-primary" id="btnSaveChanges" value="Save Changes" type="button">*@
-        @Html.ActionLink("Edit My Profile", "Edit", "Patient",new {@class="btn btn-dark editText" })
-        @Html.ActionLink("Delete My Profile", "ConfirmationDeleting", "Patient", new { @class = "btn btn-danger deleteText" })
+        @Html.ActionLink("Edit My Profile", "Edit", "Patient", new { id = Model.ID }, new {@class="btn btn-dark editText" })
+        @Html.ActionLink("Delete My Profile", "ConfirmationDeleting2", "Patient", new {id=Model.ID }   , new { @class = "btn btn-danger deleteText" })
+        
+       
         @*<span></span>
         <input class="btn btn-default btn-outline-secondary" value="Cancel" type="reset">
         <span></span>*@
@@ -132,12 +145,15 @@
     document.getElementById("emailAddress").setAttribute("value", EmailAddress);
 
     //get Phone number
-    var PhoneNumber = "@Model.PhoneNumner";
+    var PhoneNumber = "@Model.PhoneNumber";
     document.getElementById("phoneNumber").setAttribute("value", PhoneNumber);
 
     //get Date Of Birth
     var BirthDate = "@Model.DateOfBirth";
     document.getElementById("dateOfBirth").setAttribute("value", BirthDate)
+
+    var title = document.getElementById("pageTitle");
+    title.innerHTML="My Profile"
 
 </script>
 

@@ -50,7 +50,7 @@
 
                
                     @*<input class="input100" style="color:black; font-size:20px; width:100%;" type="text" name="email" placeholder="Email">*@
-                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "input100",@style = "color:black; font-size:20px; width:100%;", @placeholder = "Enter Email", @type = "text" } })
+                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "input100",@style = "color:black; font-size:20px; width:100%;", @placeholder = "Enter Email", @type = "text" ,@id="hideEmail" } })
                     @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })<br /><br />
                     <span class="focus-input100-1"></span>
                     <span class="focus-input100-2"></span>

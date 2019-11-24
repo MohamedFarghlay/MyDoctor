@@ -3,13 +3,13 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>MyDoctor</title>
+
 
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>MyDoctor</title>
+    <title id="pageTitle">MyDoctor</title>
 
     @*@Styles.Render("~/Content/css")
         @Scripts.Render("~/bundles/modernizr")*@
@@ -36,11 +36,6 @@
     <link rel="stylesheet" href="~/Templetes/Index/css/slick.css">
     <!-- style CSS -->
     <link rel="stylesheet" href="~/Templetes/Index/css/style.css">
-    <style>
-        .loggedIn {
-            display: none;
-        }
-    </style>
 </head>
 
 
@@ -52,7 +47,7 @@
 
 
     <!--::header part start::-->
-    <header class="main_menu home_menu menu_fixed">
+    <header class="main_menu home_menu menu_fixed hide-header">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-12">
@@ -88,23 +83,6 @@
 
                             </ul>
                         </div>
-
-
-                        <div class="loggedIn">
-                            <div class="nice-select" tabindex="0">
-                                <span class="current">My Profile</span>
-                                <ul class="list">
-                                    @*<li data-value="UserFName" class="option focus">UserFName</li>
-                                    <li data-value="My Profile" class="option selected">My Profile</li>
-                                    <li data-value="Logout" class="option">Logout</li>*@
-                                    <li>@Html.ActionLink("UserFName", "PatientDashboard", "Patient")</li>
-                                    <li>@Html.ActionLink("My Profile", "MyProfile", "Patient")</li>
-                                    <li>@Html.ActionLink("Logout", "Logout", "Patient")</li>
-                                </ul>
-                            </div>
-                        </div>
-
-
 
                         <!-- Button trigger modal -->
                         <button type="button" class="btn btn-primary btn-hide" data-toggle="modal" data-target="#exampleModalCenter" data-backdrop="false">

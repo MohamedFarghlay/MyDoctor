@@ -1,0 +1,57 @@
+﻿@model MyDoctor.Models.UserDeleteInfo
+
+@{
+    ViewBag.Title = "ConfirmationDeleting2";
+}
+
+<h2>ConfirmationDeleting2</h2>
+
+<style>
+    .password-style{
+        width:25%; margin-left:50%;margin-top:2%; height:33px; border-radius:15px;
+    }
+    .btn-delete{
+        
+        margin-left:40%;margin-top:2%; width:20%;
+    }
+    .btn-cancel{
+        position:absolute; 
+        margin-left:5%; width:20%;
+        margin-top:2%;
+      
+    }
+</style>
+
+<h2 style="font-family:'Times New Roman', Times, serif; margin-left:36%;margin-top:5%;">Confirmation Your Deleting </h2>
+<br />
+<p class="text-center font-weight-bold text-warning" style="font-size:30px; ">خلي بالك</p>
+<h3 class="text-center" style="margin-top:1%">Your Account Will Be Deleted Permanently</h3>
+
+
+
+@using (Html.BeginForm())
+{
+    @*@Html.AntiForgeryToken()*@
+
+    <div class="form-horizontal">
+
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+    
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.password, new { htmlAttributes = new { @class = "password-style text-center", @type = "password", @placeholder = "Enter Password To Confirm Deletion" } })
+                @Html.ValidationMessageFor(model => model.password, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <input type="hidden" value="@ViewBag.deletedUserID" />
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Delete" class="btn btn-danger btn-delete" />
+                @Html.ActionLink("Cancel", "PatientDashboard", "Patient", new { @class = "btn btn-primary btn-cancel" })
+            </div>
+        </div>
+       
+    </div>
+}
+
