@@ -153,3 +153,6 @@ E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\obj\Debug\MyDoctor.Migrations
 E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\obj\Debug\MyDoctor.Migrations.Appointments1.resources
 E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\obj\Debug\MyDoctor.Migrations.Appointments2.resources
 E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\obj\Debug\MyDoctor.csprojResolveAssemblyReference.cache
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\obj\Debug\MyDoctor.Migrations.ContactUs.resources
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\obj\Debug\MyDoctor.Migrations.ContactUs1.resources
+E:\My courses\ITI Projct Summner\MyDoctor\MyDoctor\obj\Debug\MyDoctor.Migrations.Contact.resources

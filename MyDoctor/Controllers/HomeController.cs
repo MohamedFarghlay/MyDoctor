@@ -26,10 +26,54 @@ namespace MyDoctor.Controllers
             return View();
         }
 
+
+        //Get : Contact
         public ActionResult Contact()
         {
             return View();
         }
+
+        //Post : Contact
+        [HttpPost]
+        public ActionResult Contact(ContactUs contactUs)
+        {
+            if (ModelState.IsValid)
+            {
+                ContactUs Contact = new ContactUs();
+                Contact.Name = contactUs.Name;
+                Contact.Email = contactUs.Email;
+                Contact.Subject = contactUs.Subject;
+                Contact.Message = contactUs.Message;
+                
+                try
+                {
+                    DoctorDBContext.ContactUs.Add(Contact);
+                    DoctorDBContext.SaveChanges();
+                }
+                catch (System.Data.Entity.Validation.DbEntityValidationException dbEx)
+                {
+                    Exception raise = dbEx;
+                    foreach (var validationErrors in dbEx.EntityValidationErrors)
+                    {
+                        foreach (var validationError in validationErrors.ValidationErrors)
+                        {
+                            string message = string.Format("{0}:{1}",
+                                validationErrors.Entry.Entity.ToString(),
+                                validationError.ErrorMessage);
+                            // raise a new exception nesting  
+                            // the current instance as InnerException  
+                            raise = new InvalidOperationException(message, raise);
+                        }
+                    }
+                    throw raise;
+                }
+                return View("Index");
+            }
+            return View(contactUs);
+
+        }
+
+
 
 
         //Get : LogIn

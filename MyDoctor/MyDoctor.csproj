@@ -243,6 +243,18 @@
     <Compile Include="Migrations\201908252206598_Appointments2.Designer.cs">
       <DependentUpon>201908252206598_Appointments2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201908261341068_ContactUs.cs" />
+    <Compile Include="Migrations\201908261341068_ContactUs.Designer.cs">
+      <DependentUpon>201908261341068_ContactUs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908261351568_ContactUs1.cs" />
+    <Compile Include="Migrations\201908261351568_ContactUs1.Designer.cs">
+      <DependentUpon>201908261351568_ContactUs1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908261403121_Contact.cs" />
+    <Compile Include="Migrations\201908261403121_Contact.Designer.cs">
+      <DependentUpon>201908261403121_Contact.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\EncryptPassword.cs" />
@@ -251,6 +263,7 @@
     <Compile Include="Models\UserDeleteInfo.cs" />
     <Compile Include="Models\UserLogIn.cs" />
     <Compile Include="MyDoctorDB\Appointment.cs" />
+    <Compile Include="MyDoctorDB\ContactUs.cs" />
     <Compile Include="MyDoctorDB\MyDoctorDBContext.cs" />
     <Compile Include="MyDoctorDB\MyDoctorRepository.cs" />
     <Compile Include="MyDoctorDB\Patient.cs" />
@@ -476,6 +489,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908252206598_Appointments2.resx">
       <DependentUpon>201908252206598_Appointments2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908261341068_ContactUs.resx">
+      <DependentUpon>201908261341068_ContactUs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908261351568_ContactUs1.resx">
+      <DependentUpon>201908261351568_ContactUs1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908261403121_Contact.resx">
+      <DependentUpon>201908261403121_Contact.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

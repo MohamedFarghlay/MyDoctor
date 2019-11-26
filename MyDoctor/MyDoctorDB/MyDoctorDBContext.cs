@@ -17,6 +17,8 @@ namespace MyDoctor.MyDoctorDB
         //Appointment Table
         public DbSet<Appointment> Appointments { get; set; }
 
-       
+        //ContactUs Table
+        public DbSet<ContactUs> ContactUs { get; set; }
+
     }
 }

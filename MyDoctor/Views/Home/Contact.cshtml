@@ -1,4 +1,6 @@
-﻿@{ 
+﻿@model MyDoctor.MyDoctorDB.ContactUs
+
+@{ 
     Layout = Layout = "~/Views/Shared/_Layout2.cshtml"; ;
 }
 
@@ -17,13 +19,14 @@
 </head>
 <body>
 
+
     <div class="contact1">
         <div class="container-contact1">
             <div class="contact1-pic js-tilt" data-tilt>
                 <img src="~/Templetes/Contact/images/img-01.png" alt="IMG">
             </div>
 
-            <form class="contact1-form validate-form">
+            <form class="contact1-form validate-form" method="post">
                 <span class="contact1-form-title">
                     Get in touch
                 </span>
@@ -49,7 +52,7 @@
                 </div>
 
                 <div class="container-contact1-form-btn">
-                    <button class="contact1-form-btn">
+                    <button class="contact1-form-btn" type="submit">
                         <span>
                             Send Email
                             <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
